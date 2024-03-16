@@ -1,0 +1,21 @@
+SETS
+d_binario = [01]
+d_decimal = [0-9]
+letra	  = [a-zA-Z]
+simbolo	  = [$@!.-_]
+
+ER número binario:
+d_binario+
+
+ER decimal:
+d_decimal+
+
+ER nombre:
+letra+(' 'letra+)+
+
+ER Password
+(d_decimal|lera|simbolo)+
+
+
+(d_binario+BIN | d_decimal+DEC | letra+(' 'letra+)+NAME | (d_decimal|lera|simbolo)+PSW)#
+
