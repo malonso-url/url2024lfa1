@@ -6,6 +6,7 @@ public class UI {
         Scanner in = new Scanner(System.in);
         //ScannerAFD2 afd = new ScannerAFD2();
         ScannerAFD_HT4 afd = new ScannerAFD_HT4();
+        AutomataPila apParentesis = new AutomataPila();
 
         try {
             //System.out.println("Ingrese una cadena para verificar si pertenece a: ab+");
@@ -15,12 +16,12 @@ public class UI {
             
             String comando = in.nextLine();
 
-            /*if (afd.esAceptada(comando)){
+            if (apParentesis.esAceptada(comando)){
                 System.out.println("Cadena aceptada");
             } else {
                 System.out.println("Cadena NO aceptada");    
-            }*/
-            System.out.println(afd.getToken(comando));
+            }
+            //System.out.println(afd.getToken(comando));
         } catch(Exception e){
             System.out.println(e.getMessage());
         } finally{
